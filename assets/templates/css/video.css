@@ -1,0 +1,49 @@
+.vjs-default-skin { color: #ffffff; }
+.vjs-default-skin .vjs-play-progress,
+.vjs-default-skin .vjs-volume-level { background-color: #36474f }
+.vjs-default-skin .vjs-control-bar,
+.vjs-default-skin .vjs-big-play-button { background: rgba(0,0,0,0.5) }
+.vjs-default-skin .vjs-slider { background: rgba(0,0,0,0.16666666666666666) }
+.vjs-default-skin .vjs-control-bar { font-size: 60% }
+
+#video_content {
+	
+}
+
+.thisvideo_select_subtag {
+	color:#bad5fd;
+}
+
+.thisvideo_select_subtag img {
+	border:#bad5fd 2px solid;
+}
+
+.video_select_subtag {
+	float:left;
+	margin-right:15px;
+}
+
+.video_select_subtag h1{
+	font-size:18px;
+	height:20px;
+}
+
+.video_select_subtag img {
+	width:100px;
+	height:auto;
+}
+
+.video_select_subtag img:hover {
+	border:#bad5fd 2px solid;
+}
+
+#video_description {
+	margin-top:160px;
+	clear:left;
+	font-size:14px;
+}
+
+#video_description h1 {
+	font-size:24px;
+	height:24px;
+}
