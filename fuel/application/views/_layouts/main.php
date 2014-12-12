@@ -27,6 +27,7 @@
     <div class="left_subnav"><a href="http://www.excelmage.com/index.jsp">Image Stock</a></div>
     <div class="left_subnav"><a href="http://www.excelmage.com/index2.jsp">Commercial Photo</a></div>
     <div class="left_subnav">Contact Us</div>
+    <div class="left_subnav"><a href="<?php echo site_url() ?>video_wall/69/0" style="color: #6CF;">Showcase</a></div>
 </div>
 
 <div class="main_wrapper" id="main_index">

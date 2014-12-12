@@ -6,10 +6,6 @@
 .vjs-default-skin .vjs-slider { background: rgba(0,0,0,0.16666666666666666) }
 .vjs-default-skin .vjs-control-bar { font-size: 60% }
 
-#video_content {
-	
-}
-
 .thisvideo_select_subtag {
 	color:#bad5fd;
 }
@@ -38,7 +34,7 @@
 }
 
 #video_description {
-	margin-top:160px;
+	margin-top:20px;
 	clear:left;
 	font-size:14px;
 }
