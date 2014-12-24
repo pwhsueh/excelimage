@@ -159,7 +159,9 @@ class Page_manage extends Fuel_base_controller {
 				$data = array('upload_data'=>$this->upload->data()); 
 				$updateAry["hd_path"] = "page_video/$id/hd/".$data["upload_data"]["file_name"];
 			} else{ 
-				$updateAry["hd_path"] = '';				 
+				$updateAry["hd_path"] = '';	
+				//echo $this->upload->display_errors();
+				//die();			 
 			} 
 
 
@@ -245,7 +247,8 @@ class Page_manage extends Fuel_base_controller {
 
 	function do_edit($id)
 	{ 
-		$updateAry = $this->input->post(); 
+		$updateAry = $this->input->post();
+
 
 		$updateAry["id"] = $id;
 
@@ -269,8 +272,8 @@ class Page_manage extends Fuel_base_controller {
 		$module_uri = base_url().$this->module_uri;
 		  
 		$config['upload_path'] = $hd_root_path;
-		$config['allowed_types'] = 'mp4';
-		$config['max_size']	= '999999';
+		$config['allowed_types'] = 'mp4|mov';
+		$config['max_size']	= '99999';
 		$config['max_width']  = '0';
 		$config['max_height']  = '0';
 
@@ -284,14 +287,18 @@ class Page_manage extends Fuel_base_controller {
 		{
 			$data = array('upload_data'=>$this->upload->data()); 
 			$updateAry["hd_path"] = "page_video/$id/hd/".$data["upload_data"]["file_name"];
+			//echo $updateAry["hd_path"];
+			//	die();		
 		} else{ 
-			$updateAry["hd_path"] = '';				 
+			$updateAry["hd_path"] = '';	
+			//echo $this->upload->display_errors();
+			//	die();			 
 		} 
 
 
 		$config['upload_path'] = $sd_root_path;
 		$config['allowed_types'] = 'mp4';
-		$config['max_size']	= '9999';
+		$config['max_size']	= '99999';
 		$config['max_width']  = '0';
 		$config['max_height']  = '0';
 
@@ -324,8 +331,8 @@ class Page_manage extends Fuel_base_controller {
 			$updateAry["img_path"] = '';				 
 		} 
 
-		// print_r($post_arr);
-		// die;
+		// print_r($updateAry);
+	//die;
 		$success = $this->page_manage_model->update($updateAry); 
 		
 		if($success)

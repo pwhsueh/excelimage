@@ -80,7 +80,24 @@
 								<?php endif ?> 
 							</div>
 						</div>						  
-					 
+ 						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">SEO:Title</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="seo_title" value='<?php echo $page->seo_title ?>' /> 
+							</div>
+						</div> 
+						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">SEO:Description</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="seo_desc" value='<?php echo $page->seo_desc ?>' /> 
+							</div>
+						</div> 
+						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">SEO:Keyword</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="seo_kw" value='<?php echo $page->seo_kw ?>' /> 
+							</div>
+						</div> 
 						<div class="form-group">
 							<div class="col-sm-12" style="text-align:center">
 								<button type="submit" class="btn btn-info">更新</button>

@@ -44,6 +44,9 @@ class Home extends CI_Controller {
 		$vars['css'] = array(site_url()."assets/templates/css/video.css",site_url()."assets/templates/css/video-js.css"); 
 		$vars['js'] = array(site_url()."assets/templates/js/video.js"); 
 		$vars['base_url'] = base_url(); 
+		$vars['seo_title'] = $page_info->seo_title;
+		$vars['seo_desc'] = $page_info->seo_desc;
+		$vars['seo_kw'] = $page_info->seo_kw;
 		$this->fuel->pages->render("index", $vars);
 	 
 	}

@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ExcelImage VDO</title>
+<title>ExcelImage VDO | <?php echo isset($seo_title)?$seo_title:""; ?></title>
+<meta name="description" content='<?php echo isset($seo_desc)?$seo_desc:""; ?>'>
+<meta name="keyword" content='<?php echo isset($seo_kw)?$seo_kw:""; ?>'>
+<meta property="og:description" content='<?php echo isset($seo_desc)?$seo_desc:""; ?>'>
+<meta property="og:title" content='<?php echo isset($seo_title)?$seo_title:""; ?>'>
 <link rel="stylesheet" type="text/css" href="<?php echo site_url() ?>assets/templates/css/default.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo site_url() ?>assets/templates/css/index.css" />
 

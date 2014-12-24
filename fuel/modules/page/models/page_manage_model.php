@@ -64,14 +64,20 @@ class Page_manage_model extends MY_Model {
 											title, 
 											description,
 											category_id, 
-											modi_time									 
+											modi_time,
+											seo_title,
+											seo_desc,
+											seo_kw									 
 										) 
-				VALUES ( ?, ?, ?, NOW())"; 
+				VALUES ( ?, ?, ?, NOW(),?,?,?)"; 
 
 		$para = array(
 				$insert_data['title'], 
 				$insert_data['description'],
 				$insert_data['category_id'], 
+				$insert_data['seo_title'], 
+				$insert_data['seo_desc'], 
+				$insert_data['seo_kw']
 			);
 		$success = $this->db->query($sql, $para);
 
@@ -85,12 +91,17 @@ class Page_manage_model extends MY_Model {
 
 	public function update($update_data)
 	{ 
+		//print_r($update_data);
+		//die;
 		$sql = @"UPDATE mod_page SET `title` 	= ?,
 										description 	= ?, 
 										category_id = ?,  
 										hd_path = ?, 
 										sd_path	= ?, 
-										image_path	= ?,  
+										image_path	= ?, 
+										seo_title = ?,
+										seo_desc = ?,
+										seo_kw = ?, 
 										modi_time = Now()
 									 
 				WHERE id = ?";
@@ -98,11 +109,17 @@ class Page_manage_model extends MY_Model {
 				$update_data['title'], 
 				$update_data['description'],
 				$update_data['category_id'], 
-				$update_data['hd_path'],
-				$update_data['sd_path'],
-				$update_data['img_path'],
+				$update_data['hd_path']==""?$update_data['exist_hd_file']:$update_data['hd_path'],
+				$update_data['sd_path']==""?$update_data['exist_sd_file']:$update_data['sd_path'],
+				$update_data['img_path']==""?$update_data['exist_img_file']:$update_data['img_path'],
+				$update_data['seo_title'],
+				$update_data['seo_desc'],
+				$update_data['seo_kw'],
 				$update_data['id']
 			);
+
+		//	print_r($update_data);
+		//die();
 		$success = $this->db->query($sql, $para);
  
 		 
