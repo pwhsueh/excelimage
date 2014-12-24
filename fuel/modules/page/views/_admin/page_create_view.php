@@ -66,6 +66,24 @@
 								<input type="file" class="form-control" name="sd_file" value=""> 
 							</div>
 						</div> 
+ 						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">SEO:Title</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="seo_title" value='' /> 
+							</div>
+						</div> 
+						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">SEO:Description</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="seo_desc" value='' /> 
+							</div>
+						</div> 
+						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">SEO:Keyword</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="seo_kw" value='' /> 
+							</div>
+						</div> 
 						<div class="form-group">
 							<div class="col-sm-12" style="text-align:center">
 								<button type="submit" class="btn btn-info">新增</button>
